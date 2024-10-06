@@ -41,7 +41,6 @@ class OpenAICaptionImage:
         buffered = io.BytesIO()
         pil_image.save(buffered, format="PNG")
         img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
-        print(img_str)
 
         # Set up OpenAI client
         client = openai.OpenAI(api_key=api_key)
