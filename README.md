@@ -1,10 +1,19 @@
-# ComfyUI OpenAI Nodes(WIP)
+# ComfyUI OpenAI Nodes
 
 ![Cover Image](cover.png)
 
+### Installation and Usage
+
+1. Navigate to ComfyUI/custom_nodes folder in terminal or command prompt.
+2. Clone the repo using the following command:
+   `git clone https://github.com/ComfyUI-Workflow/ComfyUI-OpenAI`
+3. Restart ComfyUI
+
+## Features(More to come)
+
 ### Image Captioning
 
-This custom node leverages OpenAI's vision capabilities to provide advanced image captioning functionality. With this node, you can:
+This node uses OpenAI's vision models for image captioning. It lets you choose:
 
 - **model**: Choose from a variety of OpenAI models
 - **system_prompt**: Customize the system prompt to guide the AI's behavior
@@ -27,10 +36,3 @@ Example use cases:
 - Analyzing visual content in various domains (e.g., medical, scientific, artistic)
 
 By utilizing OpenAI's powerful vision models, this node enables you to incorporate state-of-the-art image understanding into your ComfyUI projects with minimal setup.
-
-### Installation and Usage
-
-1. Navigate to ComfyUI/custom_nodes folder in terminal or command prompt.
-2. Clone the repo using the following command:
-   `git clone https://github.com/ComfyUI-Workflow/ComfyUI-OpenAI`
-3. Restart ComfyUI
