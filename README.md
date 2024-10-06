@@ -7,7 +7,8 @@
 1. Navigate to ComfyUI/custom_nodes folder in terminal or command prompt.
 2. Clone the repo using the following command:
    `git clone https://github.com/ComfyUI-Workflow/ComfyUI-OpenAI`
-3. Restart ComfyUI
+3. Go to `custom_nodes/ComfyUI-OpenAI` and install depedencies by running `pip install -r requirements.txt`
+4. Restart ComfyUI
 
 ## Features(More to come)
 
