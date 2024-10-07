@@ -1,9 +1,12 @@
 import io
+import os
 import openai
 import base64
 import numpy as np
 from PIL import Image
+from dotenv import load_dotenv
 
+load_dotenv()
 MODELS = [
     "gpt-4o",
     "gpt-4o-mini",
@@ -22,7 +25,6 @@ class OpenAICaptionImage:
                 "caption_prompt": ("STRING", {"default": "What's in this image?"}),
                 "max_tokens": ("INT", {"default": 300}),
                 "temperature": ("FLOAT", {"default": 0.5}),
-                "api_key" : ("STRING", {"default": ""})
             },
         }
 
@@ -31,7 +33,7 @@ class OpenAICaptionImage:
     CATEGORY = "openai"
     FUNCTION = "caption"
 
-    def caption(self, image_in, model, system_prompt, caption_prompt, max_tokens, temperature, api_key):
+    def caption(self, image_in, model, system_prompt, caption_prompt, max_tokens, temperature):
         # image to base64, image is bwhc tensor
 
         # Convert tensor to PIL Image
@@ -43,6 +45,7 @@ class OpenAICaptionImage:
         img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
 
         # Set up OpenAI client
+        api_key = os.getenv("OPENAI_API_KEY")
         client = openai.OpenAI(api_key=api_key)
 
         # Make API call to OpenAI
